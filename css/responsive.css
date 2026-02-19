@@ -1,0 +1,316 @@
+/* ===================================
+   Responsive Styles - Mobile First
+   =================================== */
+
+/* ===== TABLET (768px and below) ===== */
+@media screen and (max-width: 768px) {
+    
+    /* Typography adjustments */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none; /* Mobile menu toggle will be handled by JS */
+    }
+    
+    /* Service cards - stack vertically */
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Services grid - 2 columns */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* About sections - stack vertically */
+    .our-story .container,
+    .about-preview .container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Values grid - 2 columns */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Gallery - 2 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    /* Contact form wrapper - stack vertically */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Footer - 2 columns */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ===== MOBILE (480px and below) ===== */
+@media screen and (max-width: 480px) {
+    
+    /* Typography - smaller for mobile */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Container padding */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Section padding */
+    section {
+        padding: 3rem 0;
+    }
+    
+    /* Hero section */
+    .hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Buttons - full width on mobile */
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-buttons .btn {
+        width: auto;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .nav-phone {
+        text-align: center;
+    }
+    
+    /* Service cards - single column */
+    .service-cards {
+        gap: 1.5rem;
+    }
+    
+    /* Services grid - single column */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Values grid - single column */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Gallery - single column */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Gallery filters - stack buttons */
+    .filter-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    /* Contact form */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    /* Footer - single column */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    /* Page header */
+    .page-header {
+        padding: 3rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== LARGE SCREENS (1400px and above) ===== */
+@media screen and (min-width: 1400px) {
+    
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero h1 {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===== MOBILE NAVIGATION MENU ===== */
+@media screen and (max-width: 768px) {
+    
+    /* Hamburger menu styles (to be implemented with JS) */
+    .nav-toggle {
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .nav-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-primary);
+        position: absolute;
+        transition: var(--transition);
+    }
+    
+    .nav-toggle span:nth-child(1) {
+        top: 0;
+    }
+    
+    .nav-toggle span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .nav-toggle span:nth-child(3) {
+        bottom: 0;
+    }
+    
+    /* Mobile menu expanded */
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        gap: 0;
+    }
+    
+    .nav-menu.active li {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .nav-menu.active li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    
+    .navbar,
+    .footer,
+    .cta,
+    .hero-buttons,
+    .btn,
+    .filter-buttons {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .hero {
+        height: auto;
+        background: none;
+        color: black;
+    }
+    
+    .hero-overlay {
+        display: none;
+    }
+    
+    .hero-content {
+        color: black;
+    }
+}
