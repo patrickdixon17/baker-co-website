@@ -154,7 +154,7 @@ p {
     display: flex;
     align-items: flex-start;  /* Moves content to TOP */
     justify-content: center;  /* Keeps it CENTERED horizontally */
-    padding-top: 80px;  /* Space from the very top */
+    padding-top: 40px;  /* Space from the very top */
 }
 
 .hero-overlay {
