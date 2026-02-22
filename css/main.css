@@ -152,8 +152,9 @@ p {
     background-position: center;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start /* change from center to flex-start */
     justify-content: center;
+    padding-top: 150px; /* Add padding from top*/
 }
 
 .hero-overlay {
