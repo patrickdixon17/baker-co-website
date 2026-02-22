@@ -152,9 +152,9 @@ p {
     background-position: center;
     position: relative;
     display: flex;
-    align-items: flex-start /* change from center to flex-start */
-    justify-content: center;
-    padding-top: 150px; /* Add padding from top*/
+    align-items: flex-start;  /* Moves content to TOP */
+    justify-content: center;  /* Keeps it CENTERED horizontally */
+    padding-top: 80px;  /* Space from the very top */
 }
 
 .hero-overlay {
@@ -171,6 +171,8 @@ p {
     z-index: 2;
     text-align: center;
     color: var(--color-white);
+    max-width: 800px;  /* Add this to keep it centered */
+    width: 100%;  /* Add this */
 }
 
 .hero h1 {
