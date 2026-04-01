@@ -136,18 +136,20 @@
     }
     
     /* Navigation */
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .logo img {
-        height: 40px;
-    }
-    
-    .nav-phone {
-        text-align: center;
-    }
+   .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+   }
+
+   .logo img {
+    height: 35px;
+   }
+
+   .nav-phone {
+    text-align: right;
+   }
     
     /* Service cards - single column */
     .service-cards {
